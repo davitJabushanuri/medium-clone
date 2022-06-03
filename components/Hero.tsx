@@ -2,8 +2,8 @@ import React from 'react'
 
 const Hero = () => {
 	return (
-		<section className='px-8 py-20 bg-yellow-500 border-b border-black'>
-			<div className='flex-row gap-10'>
+		<section className='px-4 py-20 bg-yellow-500 border-b border-black flex justify-center'>
+			<div className='w-screen max-w-7xl flex-row gap-10 '>
 				<h1 className='text-6xl md:text-8xl lg:text-10xl mb-10'>
 					Stay curious.
 				</h1>
