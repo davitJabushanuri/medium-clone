@@ -12,19 +12,31 @@ const Post = ({
 	slug,
 }) => {
 	return (
-		<Link href={link}>
-			<main>
-				<div>
-					<div>
-						<img src={authorImg._ref} alt='' />
-						<p>{author}</p>
+		<Link className='' href={link}>
+			<main className='grid grid-cols-3 gap-4 max-w-3xl mb-6 cursor-pointer'>
+				<div className='col-span-2'>
+					<div className='flex gap-2 mb-3'>
+						<img
+							className='w-5 h-5 rounded-full'
+							src={urlFor(authorImg).url()}
+							alt=''
+						/>
+						<p className='font-normal text-xs'>{author}</p>
 					</div>
 
-					<h1>{title}</h1>
-					<p>{description}</p>
+					<h1 className='font-bold text-base sm:text-lg md:text-xl lg:text-2xl mb-2'>
+						{title}
+					</h1>
+					<p className='hidden sm:block text-gray-500 text-base md:text-lg'>
+						{description}
+					</p>
 				</div>
-				<div>
-					<img src={urlFor(postImage).url()} alt='' />
+				<div className='w-full'>
+					<img
+						className=' aspect-square md:aspect-video object-cover'
+						src={urlFor(postImage).url()}
+						alt=''
+					/>
 				</div>
 			</main>
 		</Link>
