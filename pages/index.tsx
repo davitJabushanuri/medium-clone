@@ -2,15 +2,16 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
+import Posts from '../components/Posts'
 import { sanityClient, urlFor } from '../sanity'
-import { Post } from '../Typings.t'
+import { Post } from '../typings.t'
 
 interface Props {
 	post: [Post]
 }
 
-const Home = ({ post }: Props) => {
-	console.log(post)
+const Home = (props: Props) => {
+	const { posts } = props
 	return (
 		<div className='min-h-screen'>
 			<Head>
@@ -20,6 +21,7 @@ const Home = ({ post }: Props) => {
 
 			<Header />
 			<Hero />
+			<Posts posts={posts} />
 		</div>
 	)
 }
