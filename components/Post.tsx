@@ -10,7 +10,7 @@ const Post = ({
 	description,
 	postImage,
 	slug,
-}) => {
+}: any) => {
 	return (
 		<Link className='' href={link}>
 			<main className='grid grid-cols-3 gap-4 max-w-3xl mb-6 cursor-pointer'>
@@ -21,7 +21,7 @@ const Post = ({
 							src={urlFor(authorImg).url()}
 							alt=''
 						/>
-						<p className='font-normal text-xs'>{author}</p>
+						<p className='font-medium text-xs'>{author}</p>
 					</div>
 
 					<h1 className='font-bold text-base sm:text-lg md:text-xl lg:text-2xl mb-2'>

@@ -3,7 +3,6 @@ import { urlFor } from '../sanity'
 import Post from './Post'
 
 const Posts = ({ posts }: any) => {
-	console.log(posts)
 	return (
 		<section className='flex justify-center px-4 py-10'>
 			<div className='w-screen max-w-7xl grid grid-cols-1 gap-4'>
